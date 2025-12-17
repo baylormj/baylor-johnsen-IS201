@@ -9,11 +9,11 @@
     <!-- Link to Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Link to Bootstrap CSS (for dropdown and general formatting) -->
+    <!-- Link to Bootstrap CSS (for toolbar and general formatting) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #d6ecff; color: #333;"> <!-- Set custom background color -->
+<body style="background-color: #d6ecff; color: #333;"> <!-- Custom Background Color -->
 
 <!-- Header Section -->
 <header id="header" class="bg-primary text-white text-center py-5">
@@ -21,15 +21,18 @@
     <p class="subtitle lead">Testifying of Jesus Christ</p>
 </header>
 
-<!-- Dropdown Navigation Menu -->
-<section id="menu-section" class="container my-4">
-    <label for="pageSelect" class="form-label">Navigate to:</label>
-    <select id="pageSelect" onchange="navigatePage()" class="form-select">
-        <option value="index.html">Home Page</option>
-        <option value="resume.html">My Resume</option>
-        <option value="from-scratch.html">From-Scratch Page</option>
-        <option value="snake-game.html">Snake Game</option>
-    </select>
+<!-- Navigation Toolbar Section -->
+<section id="toolbar" class="container my-4">
+    <div class="d-flex justify-content-center">
+        <!-- Home Button -->
+        <a class="btn btn-primary mx-2" href="index.html">Home Page</a>
+        <!-- Resume Button -->
+        <a class="btn btn-primary mx-2" href="resume.html">My Resume</a>
+        <!-- From-Scratch Page Button -->
+        <a class="btn btn-primary mx-2" href="from-scratch.html">From-Scratch Page</a>
+        <!-- Snake Game Button -->
+        <a class="btn btn-primary mx-2" href="snake-game.html">Snake Game</a>
+    </div>
 </section>
 
 <!-- Image under Header -->
@@ -129,6 +132,9 @@
 
 <!-- "Return to Top" Anchor Link -->
 <a href="#header" class="btn btn-primary d-block mx-auto my-4" style="width: 200px;">Return to Top</a>
+
+<!-- Link to Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
