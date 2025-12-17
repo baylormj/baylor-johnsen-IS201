@@ -17,16 +17,39 @@
     <p class="subtitle">Testifying of Jesus Christ</p>
 </header>
 
-<!-- Dropdown Navigation Menu -->
-<section id="menu-section">
-    <label for="pageSelect">Navigate to:</label>
-    <select id="pageSelect" onchange="navigatePage()">
-        <option value="index.html">Home Page</option>
-        <option value="resume.html">My Resume</option>
-        <option value="from-scratch.html">From-Scratch Page</option>
-        <option value="snake-game.html">Snake Game</option>
-    </select>
-</section>
+  <!-- Navigation Section -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Baylor Johnsen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a> <!-- Link back to homepage -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">View My Résumé</a> <!-- Link to resume page -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="from-scratch.html">From-Scratch Page</a> <!-- Link to from-scratch page -->
+          </li>
+          <!-- Dropdown Menu with Only 4 Pages -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="snake-game.html">Snake Game</a></li> <!-- Link to Snake Game -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <!-- Image under Header -->
 <section id="image-section">
