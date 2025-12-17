@@ -8,93 +8,75 @@
 
     <!-- Link to Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to Bootstrap CSS (for dropdown and general formatting) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- Header Section -->
-<header id="header">
-    <h1 class="title">All Those in Favor</h1>
-    <p class="subtitle">Testifying of Jesus Christ</p>
+<header id="header" class="bg-primary text-white text-center py-5">
+    <h1 class="title display-3">All Those in Favor</h1>
+    <p class="subtitle lead">Testifying of Jesus Christ</p>
 </header>
 
-  <!-- Navigation Section -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Baylor Johnsen</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a> <!-- Link back to homepage -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">View My Résumé</a> <!-- Link to resume page -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="from-scratch.html">From-Scratch Page</a> <!-- Link to from-scratch page -->
-          </li>
-          <!-- Dropdown Menu with Only 4 Pages -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              More
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="snake-game.html">Snake Game</a></li> <!-- Link to Snake Game -->
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Dropdown Navigation Menu -->
+<section id="menu-section" class="container my-4">
+    <label for="pageSelect" class="form-label">Navigate to:</label>
+    <select id="pageSelect" onchange="navigatePage()" class="form-select">
+        <option value="index.html">Home Page</option>
+        <option value="resume.html">My Resume</option>
+        <option value="from-scratch.html">From-Scratch Page</option>
+        <option value="snake-game.html">Snake Game</option>
+    </select>
+</section>
 
 <!-- Image under Header -->
-<section id="image-section">
+<section id="image-section" class="text-center my-4">
     <img src="https://yt3.googleusercontent.com/p4KAppf3iCNeIhHo_uGWg86-jos7JZYzbMmdZhIfy58LJbl0hXQk9bWmmyJP_cRI6JvAOTnKkw%3Ds900-c-k-c0x00ffffff-no-rj" alt="YouTube Channel Logo" width="400" />
 </section>
 
 <!-- About Section -->
-<section id="about">
-    <div class="container">
-        <h2>About "All Those in Favor"</h2>
-        <p>"All Those in Favor" is a YouTube channel that strives to make available the best reasons for faith in God, Jesus Christ, and the Church of Jesus Christ of Latter Day Saints.</p>
-    </div>
+<section id="about" class="container my-5">
+    <h2 class="text-center">About "All Those in Favor"</h2>
+    <p>"All Those in Favor" is a YouTube channel that strives to make available the best reasons for faith in God, Jesus Christ, and the Church of Jesus Christ of Latter Day Saints.</p>
 </section>
 
 <!-- List of Popular Videos -->
-<section id="videos">
+<section id="videos" class="container my-5">
     <h2>Popular Videos</h2>
     <ol>
         <li>"We took an anti-Mormon university class… here’s what we learned | TheosU"
             <ul>
                 <li>We took a course designed to teach evangelicals about Latter-day Saint beliefs and reacted.</li>
+                <li>The course was not designed for Latter-Day Saint viewers and was very poorly researched.</li>
             </ul>
         </li>
         <li>"Egyptologist Responds to Criticisms of the book of Abraham | Dr. Kerry Muhlestein"
             <ul>
                 <li>We interviewed Dr. Kerry Muhlestein and asked him to confront common criticisms of the Book of Abraham.</li>
+                <li>Dr. Muhlestein explains why Abraham is represented by Osiris.</li>
             </ul>
         </li>
         <li>"Tony Finau gets REAL about his Faith and Career | Full Interview"
             <ul>
                 <li>We interviewed PGA golfer Tony Finau and asked him about his faith and career.</li>
+                <li>Tony Finau explains the role of the spirit in helping him overcome his mother's passing.</li>
             </ul>
         </li>
     </ol>
 </section>
 
 <!-- Featured YouTube Video -->
-<section id="video">
+<section id="video" class="container my-5">
     <h2>Featured Video</h2>
     <p>Check out our featured video: "Tony Finau gets REAL about his Faith and Career | Full Interview"</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ac__j-scJI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 
 <!-- Tableau Interactive Graph Section -->
-<section id="tableau">
+<section id="tableau" class="container my-5">
     <h2>Church Growth Over Time</h2>
 
     <div class="tableauPlaceholder" id="viz1765950973205" style="position: relative;">
@@ -132,7 +114,7 @@
 </section>
 
 <!-- Footer Section -->
-<footer id="footer">
+<footer id="footer" class="bg-dark text-white text-center py-3">
     <p>&copy; 2025 Baylor Johnsen | IS 201</p>
 </footer>
 
@@ -144,6 +126,9 @@
         window.location.href = selectedPage;
     }
 </script>
+
+<!-- "Return to Top" Anchor Link -->
+<a href="#header" class="btn btn-primary d-block mx-auto my-4" style="width: 200px;">Return to Top</a>
 
 </body>
 </html>
