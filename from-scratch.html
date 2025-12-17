@@ -16,6 +16,17 @@
     <p class="subtitle">Testifying of Jesus Christ</p>
 </header>
 
+<!-- Dropdown Navigation Menu -->
+<section id="menu-section">
+    <label for="pageSelect">Navigate to:</label>
+    <select id="pageSelect" onchange="navigatePage()">
+        <option value="index.html">Home Page</option>
+        <option value="resume.html">My Resume</option>
+        <option value="from-scratch.html">From-Scratch Page</option>
+        <option value="snake-game.html">Snake Game</option>
+    </select>
+</section>
+
 <!-- Image under Header -->
 <section id="image-section">
     <img src="https://yt3.googleusercontent.com/p4KAppf3iCNeIhHo_uGWg86-jos7JZYzbMmdZhIfy58LJbl0hXQk9bWmmyJP_cRI6JvAOTnKkw%3Ds900-c-k-c0x00ffffff-no-rj" alt="YouTube Channel Logo" width="400" />
@@ -101,11 +112,19 @@
     </script>
 </section>
 
-
 <!-- Footer Section -->
 <footer id="footer">
     <p>&copy; 2025 Baylor Johnsen | IS 201</p>
 </footer>
+
+<!-- JavaScript for Dropdown Navigation -->
+<script>
+    function navigatePage() {
+        const pageSelect = document.getElementById("pageSelect");
+        const selectedPage = pageSelect.value;
+        window.location.href = selectedPage;
+    }
+</script>
 
 </body>
 </html>

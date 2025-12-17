@@ -19,11 +19,31 @@
             font-size: 24px;
             margin-top: 20px;
         }
+        /* Dropdown menu styling */
+        #menu {
+            margin-top: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
 
     <h1>Snake Game</h1>
+
+    <!-- Dropdown Menu for Navigation -->
+    <div id="menu">
+        <label for="pageSelect">Navigate to:</label>
+        <select id="pageSelect" onchange="navigatePage()">
+            <option value="index.html">Home Page</option>
+            <option value="resume.html">My Resume</option>
+            <option value="from-scratch.html">From-Scratch Page</option>
+            <option value="snake-game.html" selected>Snake Game</option>
+        </select>
+    </div>
+
     <canvas id="gameCanvas" width="400" height="400"></canvas>
     <p id="score">Score: 0</p>
 
@@ -60,7 +80,7 @@
 
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
+
             for (let i = 0; i < snake.length; i++) {
                 ctx.fillStyle = i === 0 ? "#00FF00" : "#FFFFFF";
                 ctx.fillRect(snake[i].x, snake[i].y, box, box);
@@ -111,6 +131,13 @@
         }
 
         let game = setInterval(draw, 100);
+
+        // Function to navigate to the selected page
+        function navigatePage() {
+            const pageSelect = document.getElementById("pageSelect");
+            const selectedPage = pageSelect.value;
+            window.location.href = selectedPage;
+        }
     </script>
 
 </body>
